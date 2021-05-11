@@ -1,0 +1,59 @@
+##LevelXP s'écris comme cela:
+##LevelXP:
+##  - "Niveau:XpRequis"
+##  - "Niveau:XpRequis"
+##Veuillez à ne pas marquer un niveau en double et ne pas passer un niveau (Faire Niveau 1 puis Niveau 3) et tout doit être en ordre
+LevelXP:
+  - "1:1000"
+  - "2:1600"
+  - "3:2000"
+## Ne JAMAIS changez/enlever(vous pouvez ajouter) le nom des métiers(le nom dans la config, pas le displayName) après que les joueurs aient commencer à récupérer de l'xp
+## puisque si vous le faites, vous devrez reset toutes les données dans le fichier "database.yml"
+## Si cela est vraiment nécessaire contactez moi sur discord: Sharkyy#8940 et je le ferai pour vous, pour ne rien perdre
+Jobs:
+  - "Jobs1"
+  - "Jobs2"
+  - "Jobs3"
+##Évitez de mettre 2 Jobs avec le même displayName
+##Comment mettre des Events:
+##Events:
+##  "Niveau":
+##    - "EventType:ID:Data:Xp"
+##    - "EventType:ID:Data:Xp"
+##EvenType List: KILL - BREAK - CRAFT
+##ID est soit l'id du bloc, ou l'id du mob
+##Pour trouver les ids: https://minecraft-ids.grahamedgecombe.com/ - https://minecraft-ids.grahamedgecombe.com/entities
+##N'utilisez que les id des items/mobs de la 1.7
+##Data est pour les items comme pour:
+##Exemple: Spruce Wood ID = 17:1 (Le 1 est le Data)
+##Pour les mobs le Data doit être de 0 puisqu'ils n'ont pas de Data
+#Xp est le nombre d'xp gagné pour l'action
+Jobs1:
+  DisplayName: "Mineur"
+  Events:
+    "0":
+      - "BREAK:1:0:100"
+      - "KILL:54:0:100"
+    "1":
+      - "BREAK:1:0:200"
+    "2":
+      - "BREAK:2:0:100"
+    "3":
+      - "BREAK:1:0:100"
+      - "KILL:54:0:100"
+      
+Jobs2:
+  DisplayName: "Killeur"
+  Events:
+    "0":
+      - "KILL:54:0:5"
+    "1":
+      - "KILL:54:0:10"
+      
+Jobs3:
+  DisplayName: "Crafteur"
+  Events:
+    "0":
+      - "COOK:1:0:10"
+    "1":
+      - "CRAFT:5:0:5"

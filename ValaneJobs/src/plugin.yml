@@ -1,0 +1,8 @@
+name: ValaneJobs
+version: 1.0
+author: Sharkyy
+main: ca.sharkyy.valanejobs.Main
+
+commands:
+ valanejobs:
+    aliases: vjobs
